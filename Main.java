@@ -1,7 +1,7 @@
+// PARTNER NAME: Jon Zotara		
 // PARTNER NAME:
-// PARTNER NAME:
-// CS111 SECTION #:
-// DATE:
+// CS111 SECTION #: 1270	
+// DATE: 3/12/25
 
 public class Main
 {
