@@ -56,7 +56,7 @@ public class Main
 	 * Prints menu and prompts user for input for kind of taco and number in order. If tacos are available,
 	 * will update total funds and confirm order with user, otherwise error message given
 	 */
-	public static void takeOrder() //TODO: upgrade per documentation
+	public static void takeOrder() 
 	{
 		//DECLARATION + INITIALIZATION SECTION
 		int option, numTacosOrdered;
@@ -67,8 +67,12 @@ public class Main
 		numTacosOrdered = UtilityBelt.readInt("Enter number of tacos you want> ", 1, 50);
 
 		//CALCULATION + OUTPUT SECTION
-		TacoStand.updateTotalFunds(option, numTacosOrdered);
-		Main.printConfirmation(numTacosOrdered);
+		if (TacoStand.areTacosAvailable(option, numTacosOrdered)) {
+			TacoStand.updateTotalFunds(option, numTacosOrdered);
+			Main.printConfirmation(numTacosOrdered, option);
+		} else {
+			System.out.println("We don't have that many tacos, sorry! Try again :(");
+		}
 	}
 
 	/**
@@ -76,9 +80,14 @@ public class Main
 	 * 
 	 * @param numTacos
 	 */
-	public static void printConfirmation(int numTacos) //TODO: upgrade per documentation
-	{
-		System.out.println("Here you go, buen provecho!");
-		System.out.println("🌮");
+	public static void printConfirmation(int numTacos, int tacoOption) 
+	{	
+			System.out.println("Here you go, buen provecho!");
+			for (int i = 0; i < numTacos; i++) {
+				System.out.print("🌮");
+			}
+			System.out.println();
+			System.out.println();
+		}
+
 	}
-}

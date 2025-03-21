@@ -135,22 +135,17 @@ public class TacoStand
 	 */
 	public static boolean areTacosAvailable(int tacoOption, int numTacos)
 	{
-		if (TacoStand.numAsada <= numTacos && tacoOption == 1) {
-			Main.printConfirmation(numTacos);
+		if (tacoOption == 1 && numTacos <= TacoStand.numAsada) {
 			return true;
-		} else if (tacoOption == 2 && numTacos < TacoStand.numPollo) {
-			Main.printConfirmation(numTacos);
+		} else if (tacoOption == 2 && numTacos <= TacoStand.numPollo) {
 			return true;
-		} else if (tacoOption == 3 && numTacos < TacoStand.numLengua) {
-			Main.printConfirmation(numTacos);
+		} else if (tacoOption == 3 && numTacos <= TacoStand.numLengua) {
 			return true;
-		} else if (tacoOption == 4 && numTacos < TacoStand.numUltimate) {
-			Main.printConfirmation(numTacos);
+		} else if (tacoOption == 4 && numTacos <= TacoStand.numUltimate) {
 			return true;
 		} else {
-			System.out.println("We don't have that many tacos, sorry! Try again :(");
 			return false;
 		}
-	 //TODO: this is stubbed, replace this line with your actual code!
+	 
 	}
 }
