@@ -80,6 +80,8 @@ public class Main
 	 * 
 	 * @param numTacos
 	 */
+
+	 //modified method in order to print out the proper amount of taco emojis, and to make the proper amount of cleared lines.
 	public static void printConfirmation(int numTacos, int tacoOption) 
 	{	
 			System.out.println("Here you go, buen provecho!");

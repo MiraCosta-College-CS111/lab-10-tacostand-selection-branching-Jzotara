@@ -100,6 +100,7 @@ public class TacoStand
 	 * @param tacoOption menu option (kind of taco)
 	 * @param numTacos number of tacos as part of order, assume > 0
 	 */
+	// used switch to check for the taco option, then to properly add to the right supplies
 	public static void updateTotalFunds(int tacoOption, int numTacos)
 	{
 		switch (tacoOption) 
@@ -133,6 +134,7 @@ public class TacoStand
 	 * 
 	 * @return boolean representing if specific kind of tacos, for the number in order, are available
 	 */
+	// used if/else if statements to check and return the proper boolean in order to  properly check if the tacos are avaliable
 	public static boolean areTacosAvailable(int tacoOption, int numTacos)
 	{
 		if (tacoOption == 1 && numTacos <= TacoStand.numAsada) {
