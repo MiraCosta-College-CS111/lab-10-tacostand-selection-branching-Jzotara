@@ -85,11 +85,26 @@ public class Main
 	public static void printConfirmation(int numTacos, int tacoOption) 
 	{	
 			System.out.println("Here you go, buen provecho!");
-			for (int i = 0; i < numTacos; i++) {
+			if (numTacos == 1){
 				System.out.print("🌮");
+			} else if (numTacos == 2) {
+				System.out.print("🌮🌮");
+			} else if (numTacos == 3) {
+				System.out.print("🌮🌮🌮");
+			} else if (numTacos == 4) {
+				System.out.print("🌮🌮🌮🌮");
+			} else if (numTacos == 5) {
+				System.out.print("🌮🌮🌮🌮🌮");
+			} else if (numTacos == 6) {
+				System.out.print("🌮🌮🌮🌮🌮🌮");
+			} else if (numTacos == 7) {
+				System.out.print("🌮🌮🌮🌮🌮🌮🌮");
+			} else {
+				System.out.print("🌮🌮🌮🌮🌮🌮🌮🌮");
 			}
 			System.out.println();
 			System.out.println();
+			}
 		}
 
-	}
+	
